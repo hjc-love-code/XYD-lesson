@@ -22,4 +22,3 @@ int main() {
 	cin >> a >> b;
 	cout << getmini(a,b) << endl << getmax(a,b);
 }
-
