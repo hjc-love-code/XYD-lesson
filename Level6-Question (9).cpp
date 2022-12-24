@@ -1,11 +1,17 @@
 #include<bits/stdc++.h>
 using namespace std;
-long long c[35][35];
+long long c[35][35], d[35][35];
+
 int main() {
     c[1][1] = 1;
-    int n, d;
-    cin >> n >> d;
-    for (int i = 1; i <=  + 1; i++) {
+    int a, b, n;
+    cin >> a >> b >> n;
+    for (int i = 0; i < n; i++) {
+        int x, y;
+        cin >> d[i][0] >> d[i][1];
+    }
+    
+    for (int i = 1; i <= a + 1; i++) {
         if (i == 1) {
             for (int j = 2; j <= b + 1; j++) {
                 for (int x = 0; x < n; x++) {
@@ -33,7 +39,6 @@ int main() {
             }
         }   
     }
-    //1,000,000,000
     cout << c[a][b];
     return 0;
 }

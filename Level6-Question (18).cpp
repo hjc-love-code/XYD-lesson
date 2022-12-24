@@ -1,28 +1,32 @@
 #include<bits/stdc++.h>
 using namespace std;
-int x;
-void F(int &x) {
-    x ^= x & (x << 3);
-    x ^= x & (x >> 2);
-    x %= 65536;
-}
+struct node {
+	string type;
+	double m;
+}s[100005];
 
-void G(int &x) {
-    x ^= x & (x << 2);
-    x ^= x & (x >> 3);
-    x %= 65536;
+bool cmp(node x, node y) {
+	if (x.type == "male" && y.type == "female")
+		return true;
+	else if (x.type == "male" && x.m < y.m) {
+		return true;
+	}
+	else if (y.type == "female" && x.m > y.m) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }
 int main() {
-    string s;
-    cin >> s >> x;
-    for (int i = 0; i < s.size(); i++) {
-        if (s[i] == 'F') {
-            F(x);
-        }
-        else if(s[i] == 'G') {
-            G(x);
-        }
-    }
-    cout << x;
+	int n;
+	cin >> n;
+	for (int i = 0; i < n; i++) {
+		cin >> s[i].type >> s[i].m;
+	}
+	sort(s, s + n, cmp);
+	for (int i = 0; i < n; i++) {
+		printf("%.2lf ",s[i].m);
+	}
 }
 
