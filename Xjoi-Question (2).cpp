@@ -13,5 +13,9 @@ int main() {
             a[i] = (a[i] + a[i - j]) % mod;
         }
     }
+    for (int i = 0; i < n;)
     cout << a[n];
 }
+
+
+
