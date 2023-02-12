@@ -97,5 +97,10 @@
         "variant": "cpp",
         "vector": "cpp",
         "algorithm": "cpp"
-    }
+    },
+    "C_Cpp.errorSquiggles": "disabled",
+    "editor.defaultFormatter": "ms-vscode.cpptools",
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange"
 }
