@@ -102,6 +102,36 @@
     > 合并问题的解可以的到源文件的解  
 - 方式：递归
 
+# 广度优先搜索（求最小步数）
+- 广搜指当碰到岔路口时，总是先依次访问该岔路口能直接到达所有节点  
+- 广搜模版  
+```c++
+    void bfs() {
+        //初始化队列;
+        //起点入队，标记;
+        while(/*队列非空*/) 
+        {
+            if (/*终点*/) 
+            {
+                //some code
+                return;
+            }
+            for (int i = 0; i < n; i++) {
+                if (true) {
+                    //节点入队
+                    //标记
+                }
+            }
+        }
+    }
+```
 
+// tre[1].push_back(2);
+// tre[1].push_back(3);
+// tre[1].push_back(4);
+// tre[1].pop_back();
+// tre[1].empty();
+// tre[1].size();
+// sort(tre[1].begin(), tre[1].end());
  
 
